@@ -31,6 +31,7 @@ export async function POST(req: NextRequest) {
       }
       const parentReply = post.replies.find((reply) => {
         console.log("Checking reply:", reply);
+        // @ts-ignore
         return reply._id == parentReplyId;
       });
       console.log("Parent Reply:", parentReply);
